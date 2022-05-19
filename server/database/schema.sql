@@ -23,15 +23,13 @@ CREATE TABLE airports (
   country VARCHAR(16),
   postal_code VARCHAR(8),
   phone VARCHAR(32),
-
-  -- latitude FLOAT,
-  -- longitude FLOAT,
-
+  latitude FLOAT,
+  longitude FLOAT,
   uct INT,
   website VARCHAR(64)
 );
 
 -- PostGIS longitude latitude
-ALTER TABLE airports ADD COLUMN geog GEOGRAPHY;
+-- ALTER TABLE airports ADD COLUMN geog GEOGRAPHY;
 
 \unset ON_ERROR_STOP
