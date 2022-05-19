@@ -14,6 +14,8 @@ import uk from "./data/uk.ts"
 import usa from "./data/usa.ts"
 import wales from "./data/wales.ts"
 
+import { Airport } from "../types/api.ts"
+
 const airports = africa
    .concat(asia)
    .concat(australia)
@@ -30,10 +32,39 @@ const airports = africa
    .concat(usa)
    .concat(wales)
 
+// for (const airport of airports) {
+//    await Deno.writeTextFile(
+//       "airports.csv",
+//       `${airport}\n`,
+//       { append: true },
+//    )
+// }
+
+function fetchAirport(airport:string) {
+   const API = `https://airport-info.p.rapidapi.com/airport?iata=${airport}`
+   const options = {
+      method: "GET",
+      headers: {
+         "X-RapidAPI-Host": "airport-info.p.rapidapi.com",
+         "X-RapidAPI-Key": "719636cce8msh40e8c49f264c1e6p19a508jsn4eb16a971738"
+      }
+   }
+
+   return fetch(API, options)
+      .then(r => r.json() as Promise<Airport>)
+      .catch(console.log)
+}
+
+function * counter() { for (let i=0; true; i++) yield i }
+let count = counter()
+
 for (const airport of airports) {
+   const response = await fetchAirport(airport)
+
    await Deno.writeTextFile(
-      "airports.csv",
-      `${airport}\n`,
+      "final_airports.csv",
+      JSON.stringify(response) + "\n",
       { append: true },
    )
+   console.log(`Job: ${count.next().value}, Airport: ${airport}`)
 }

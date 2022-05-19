@@ -1,4 +1,4 @@
-interface Airport {
+export interface Airport {
    id: number            // 4044
    iata: string          // LAX
    icao: string          // KLAX
