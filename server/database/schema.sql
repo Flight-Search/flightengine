@@ -12,21 +12,26 @@ CREATE TABLE airports (
   id INT PRIMARY KEY,
   iata CHAR(3),
   icao CHAR(4),
-  name VARCHAR(x),
-  location VARCHAR(x),
-  street_number VARCHAR(x),
-  street VARCHAR(x),
-  city VARCHAR(x),
-  county VARCHAR(x),
-  state VARCHAR(x),
-  country_iso VARCHAR(x),
-  country VARCHAR(x),
-  postal_code VARCHAR(x),
-  phone VARCHAR(x),
-  latitude INT,
-  longitude INT,
-  uct CHAR(x),
-  website VARCHAR(x)
-)
+  name VARCHAR(64),
+  location VARCHAR(64),
+  street_number VARCHAR(8),
+  street VARCHAR(32),
+  city VARCHAR(32),
+  county VARCHAR(32),
+  state VARCHAR(16),
+  country_iso VARCHAR(3),
+  country VARCHAR(16),
+  postal_code VARCHAR(8),
+  phone VARCHAR(32),
+
+  -- latitude FLOAT,
+  -- longitude FLOAT,
+
+  uct INT,
+  website VARCHAR(64)
+);
+
+-- PostGIS longitude latitude
+ALTER TABLE airports ADD COLUMN geog GEOGRAPHY;
 
 \unset ON_ERROR_STOP
