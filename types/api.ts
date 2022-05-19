@@ -1,4 +1,5 @@
-export interface Airport {
+// https://airport-info.p.rapidapi.com/airport
+export type Airport = {
    id: number            // 4044
    iata: string          // LAX
    icao: string          // KLAX
@@ -17,4 +18,4 @@ export interface Airport {
    longitude: number     // -118.40853
    uct: number           // -420
    website: string       // http://www.lawa.org/welcomelax.aspx
-}
+} | { error: { text: "No airport found" } }
