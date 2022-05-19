@@ -15,6 +15,18 @@ CREATE TABLE airports (
   name CHAR(x),
   location VARCHAR(x),
   street_number CHAR(1),
+  street CHAR(x),
+  city CHAR(x),
+  county CHAR(x),
+  state CHAR(x),
+  country_iso CHAR(x),
+  country CHAR(x),
+  postal_code VARCHAR(x),
+  phone VARCHAR(x),
+  latitude INT,
+  longitude INT,
+  uct CHAR(x),
+  website VARCHAR(x)
 )
 
 \unset ON_ERROR_STOP
