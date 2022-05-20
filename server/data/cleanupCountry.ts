@@ -19,33 +19,55 @@ type Airport = {
    longitude: number
 }
 
-const tab = "\t"
-const lineEnd = "\n"
-const comma = ","
-
 const INPUT = "./archive/airports.tsv"
 const OUTPUT = "airports.tsv"
+
+const tab = "\t"
+const line_end = "\n"
+const comma = ","
+const quoted_word = /"(.*?)"/
+const parens_word = /\(.*?\)/
 
 // —————————————————————————————————————————————————————————————————————————————
 // Cleanup Data
 
 // header: [id, iata, name, location, latitude, longitude]
 const TSV = await Deno.readTextFile(INPUT)
-const [header, ...rows] = TSV.split(lineEnd)
+const [header, ...rows] = TSV.split(line_end)
 
 const airports: Airport[] = rows
    .map(row => row.split(tab))
    .map(row => ({
       id: Number(row[0]),
       iata: row[1],
-      name: row[2],
-      country: row[3].split(comma).at(-1)?.trim() as string,
+      name: cleanName(row[2]),
+      country: cleanCountry(row[3].split(comma).at(-1)?.trim() as string),
       latitude: Number(row[4]),
       longitude: Number(row[5]),
    }))
 
+function cleanCountry(word:string) {
+   switch (word) {
+      case "Côte d'Ivoire": 
+         return "Ivory Coast"
+      case "Macedonia": 
+      case "Republic of Macedonia":
+         return "The Republic of North Macedonia"
+      default:
+         return word
+   }
+}
 
-const newHeaders: Array<keyof Airport> = [
+function cleanName(name:string) {
+   return name
+      .replace(quoted_word, "")
+      .replace(parens_word, "")
+}
+
+// —————————————————————————————————————————————————————————————————————————————
+// Execute
+
+const new_headers: Array<keyof Airport> = [
    "id",
    "iata",
    "name",
@@ -54,15 +76,12 @@ const newHeaders: Array<keyof Airport> = [
    "longitude",
 ]
 
-// —————————————————————————————————————————————————————————————————————————————
-// Execute
-
-Deno.writeTextFileSync(OUTPUT, newHeaders.join(tab) + lineEnd)
+Deno.writeTextFileSync(OUTPUT, new_headers.join(tab) + line_end)
 
 for (const airport of airports) {
    Deno.writeTextFileSync(
       OUTPUT,
-      newHeaders.map(header => airport[header]).join(tab).concat(lineEnd),
+      new_headers.map(header => airport[header]).join(tab).concat(line_end),
       { append: true },
    )
 }
