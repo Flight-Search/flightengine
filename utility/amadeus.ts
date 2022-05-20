@@ -48,10 +48,17 @@ interface DestinationError {
    ]
 }
 
-const headers = {
-
+const options = {
+   method: "POST",
+   headers: { "Content-Type": "application/x-www-form-urlencoded", },
+   body: `&grant_type=client_credentials` 
+      + `client_id=${AMADEUS_KEY}`
+      + `&client_secret=${AMADEUS_SECRET}`,
 }
 
+/**
+ * Consumes `airport` code such as `"DEN"` and fetches a list of destinations.
+ */
 function fetchDestinations(airport:string) {
    const URL = `https://${API.base}${API.destinations}?departureAirportCode=${airport}`
    return fetch(URL)
