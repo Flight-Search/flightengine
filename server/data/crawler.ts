@@ -14,7 +14,8 @@ import uk from "./raw/uk.ts"
 import usa from "./raw/usa.ts"
 import wales from "./raw/wales.ts"
 
-import { Airport } from "../../types/api.ts"
+import { AirportResponse } from "../../types/api.ts"
+import { RAPID_KEY } from "../../.env.ts"
 
 // —————————————————————————————————————————————————————————————————————————————
 // Environment
@@ -42,14 +43,14 @@ const count = counter()
 // Query Preparation
 
 const headers = {
-   "X-RapidAPI-Host": "airport-info.p.rapidapi.com",
-   "X-RapidAPI-Key": "719636cce8msh40e8c49f264c1e6p19a508jsn4eb16a971738"
+   "X-RapidAPI-Host" : "airport-info.p.rapidapi.com",
+   "X-RapidAPI-Key"  : RAPID_KEY,
 }
 
 const api = (airport:string) => `https://airport-info.p.rapidapi.com/airport?iata=${airport}`
 
 const fetchAirport = (airport:string) => fetch(api(airport), { headers })
-   .then(r => r.json() as Promise<Airport>)
+   .then(r => r.json() as Promise<AirportResponse>)
    .catch(console.log)
 
 // —————————————————————————————————————————————————————————————————————————————
