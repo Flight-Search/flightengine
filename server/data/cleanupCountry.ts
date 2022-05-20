@@ -31,7 +31,7 @@ const OUTPUT = "airports.tsv"
 
 // header: [id, iata, name, location, latitude, longitude]
 const TSV = await Deno.readTextFile(INPUT)
-const [header, ...rows] = TSV.split("\n")
+const [header, ...rows] = TSV.split(lineEnd)
 
 const airports: Airport[] = rows
    .map(row => row.split(tab))
@@ -43,6 +43,8 @@ const airports: Airport[] = rows
       latitude: Number(row[4]),
       longitude: Number(row[5]),
    }))
+
+Deno.writeTextFileSync(OUTPUT, header + lineEnd)
 
 for (const airport of airports) {
    const headers: Array<keyof Airport> = [
@@ -56,10 +58,7 @@ for (const airport of airports) {
  
    Deno.writeTextFileSync(
       OUTPUT,
-      headers
-         .map(header => airport[header])
-         .join(tab)
-         .concat(lineEnd),
+      headers.map(header => airport[header]).join(tab).concat(lineEnd),
       { append: true },
    )
 }
