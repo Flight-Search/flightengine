@@ -1,34 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Flight Search
 
-## Getting Started
+A privacy-first open source project to help people save money on flights. We 
+look at alternative connecting flights from multiple providers and suggest 
+nearby airports if there are savings.
 
-First, run the development server:
+# Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+| name       | description           | location
+| ---------- | --------------------- | ---------
+| React      | DOM manipulation      | client
+| Node       | server runtime        | server
+| Express    | http routing          | server
+| PostgreSQL | database              | server
+| Next.js    | build system & server | client & server
+| Nanoid     | unique ID generator   | client & server
+| TypeScript | type verification     | client & server
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Requirements
+- Node v18
+- PostgreSQL v14
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+# Installation
+1. Clone the repository.
+   ```
+   git clone git@github.com:Flight-Search/flightengine.git fly
+   ```
+2. Navigate to the project folder.
+   ```
+   cd fly
+   ```
+3. Install dependencies.
+   ```bash
+   npm i
+   ```
+4. Manage secrets.
+   - Register for an Amadeus account at their [Developer Portal][DeveloperPortal].
+   - Follow [these steps][SelfService] to obtain an `API key` and `API secret` for an app.
+   - Visit [RapidAPI] and obtain an API key.
+   - Create a `.env.ts` file in the project root with the following contents:
+   ```typescript
+   export const AMADEUS_KEY    = "YOUR API KEY GOES HERE"
+   export const AMADEUS_SECRET = "YOUR API SECRET GOES HERE"
+   export const RAPID_KEY      = "YOUR RAPID API KEY GOES HERE"
+   ```
+   > There is an entry in `.gitignore` that will prevent the `.env.ts` file from being committed.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[DeveloperPortal]: https://developers.amadeus.com
+[SelfService]: https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335
+[RapidAPI]: https://rapidapi.com
