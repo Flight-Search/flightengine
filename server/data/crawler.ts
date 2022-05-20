@@ -14,7 +14,7 @@ import uk from "./raw/uk.ts"
 import usa from "./raw/usa.ts"
 import wales from "./raw/wales.ts"
 
-import { Airport } from "../../types/api.ts"
+import { AirportResponse } from "../../types/api.ts"
 
 // —————————————————————————————————————————————————————————————————————————————
 // Environment
@@ -49,7 +49,7 @@ const headers = {
 const api = (airport:string) => `https://airport-info.p.rapidapi.com/airport?iata=${airport}`
 
 const fetchAirport = (airport:string) => fetch(api(airport), { headers })
-   .then(r => r.json() as Promise<Airport>)
+   .then(r => r.json() as Promise<AirportResponse>)
    .catch(console.log)
 
 // —————————————————————————————————————————————————————————————————————————————

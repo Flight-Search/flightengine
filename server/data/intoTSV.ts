@@ -9,7 +9,7 @@ const filtered = airports
    .filter(airport => !airport.error)
    .filter(airport => !ids.has(airport.id) && ids.add(airport.id))
 
-const headers = ["id", "iata", "name", "location", "latitude", "longitude"]
+const headers: Array<keyof Airport> = ["id", "iata", "name", "location", "latitude", "longitude"]
 const FILE = "airports.tsv"
 
 // —————————————————————————————————————————————————————————————————————————————
