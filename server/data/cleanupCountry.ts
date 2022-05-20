@@ -44,21 +44,25 @@ const airports: Airport[] = rows
       longitude: Number(row[5]),
    }))
 
-Deno.writeTextFileSync(OUTPUT, header + lineEnd)
+
+const newHeaders: Array<keyof Airport> = [
+   "id",
+   "iata",
+   "name",
+   "country",
+   "latitude",
+   "longitude",
+]
+
+// —————————————————————————————————————————————————————————————————————————————
+// Execute
+
+Deno.writeTextFileSync(OUTPUT, newHeaders.join(tab) + lineEnd)
 
 for (const airport of airports) {
-   const headers: Array<keyof Airport> = [
-      "id",
-      "iata",
-      "name",
-      "country",
-      "latitude",
-      "longitude",
-   ]
- 
    Deno.writeTextFileSync(
       OUTPUT,
-      headers.map(header => airport[header]).join(tab).concat(lineEnd),
+      newHeaders.map(header => airport[header]).join(tab).concat(lineEnd),
       { append: true },
    )
 }

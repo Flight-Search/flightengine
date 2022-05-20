@@ -1,4 +1,4 @@
-id	iata	name	location	latitude	longitude
+id	iata	name	country	latitude	longitude
 5	AAE	Rabah Bitat Airport (Les Salines Airport)	Algeria	36.82406	7.8215694
 13	AAM	Mala Mala Airport	South Africa	-24.815424	31.543955
 34	ABJ	Port Bouet Airport (Felix Houphouet Boigny Int'l)	Côte d'Ivoire	5.2544694	-3.9296293
