@@ -1,26 +1,32 @@
 import airports from "./airports.ts"
 
+const ids = new Set()
 const filtered = airports.filter(airport => !airport.error)
+   .filter(airport => {
+      if (ids.has(airport.id)) return false
+      ids.add(airport.id)
+      return true
+   })
 
 const headers = [
    "id",
    "iata",
-   "icao",
+   // "icao",
    "name",
    "location",
-   "street_number",
-   "street",
-   "city",
-   "county",
-   "state",
-   "country_iso",
-   "country",
-   "postal_code",
-   "phone",
+   // "street_number",
+   // "street",
+   // "city",
+   // "county",
+   // "state",
+   // "country_iso",
+   // "country",
+   // "postal_code",
+   // "phone",
    "latitude",
    "longitude",
-   "uct",
-   "website",
+   // "uct",
+   // "website",
 ]
 
 await Deno.writeTextFile(
