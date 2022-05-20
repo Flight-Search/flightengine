@@ -1,4 +1,4 @@
-import airports from "./airports.ts"
+import airports from "./archive/airports_json.ts"
 import { Airport } from "../../types/api.ts"
 
 // —————————————————————————————————————————————————————————————————————————————
