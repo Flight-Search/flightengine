@@ -1436,11 +1436,11 @@ id	iata	name	country	latitude	longitude
 377	ASD	Andros Town International Airport	Bahamas	24.698364	-77.795265
 401	ATC	Arthur's Town Airport	Bahamas	24.629278	-75.67499
 425	AUA	Queen Beatrix International Airport	Kingdom of the Netherlands	12.501594	-70.01199
-473	AXA	Clayton J. Lloyd International Airport	British Overseas Territory of Anguilla	18.20659	-63.05263
+473	AXA	Clayton J. Lloyd International Airport	Anguilla	18.20659	-63.05263
 485	AXP	Spring Point Airport	Bahamas	22.442047	-73.97066
 520	AZS	Samaná El Catey International Airport	Dominican Republic	19.267656	-69.73046
 571	BCA	Gustavo Rizo Airport	Cuba	20.3584	-74.50417
-596	BDA	L.F. Wade International Airport	British Overseas Territory of Bermuda	32.35983	-64.702034
+596	BDA	L.F. Wade International Airport	Bermuda	32.35983	-64.702034
 679	BGI	Grantley Adams International Airport	Barbados	13.076585	-59.487793
 732	BIM	South Bimini Airport	Bahamas	25.701363	-79.2726
 884	BON	Flamingo International Airport	Caribbean Netherlands	12.133385	-68.27688
@@ -1453,18 +1453,18 @@ id	iata	name	country	latitude	longitude
 1508	CRI	Colonel Hill Airport 	Bahamas	22.74586	-74.17721
 1588	CUR	Curaçao International Airport 	Curaçao	12.188463	-68.960945
 1638	CYA	Antoine-Simon Airport	Haiti	18.27041	-73.78851
-1639	CYB	Charles Kirkconnell International Airport	British Overseas Territory of Cayman Islands	19.690191	-79.87941
+1639	CYB	Charles Kirkconnell International Airport	Cayman Islands	19.690191	-79.87941
 1647	CYO	Vilo Acuña Airport	Cuba	21.623205	-81.55369
 1861	DOM	Douglas–Charles Airport	Dominica	15.546761	-61.30091
-2048	EIS	Terrance B. Lettsome International Airport	British Overseas Territory of Virgin Islands	18.4442	-64.53718
+2048	EIS	Terrance B. Lettsome International Airport	Virgin Islands	18.4442	-64.53718
 2071	ELH	North Eleuthera Airport	Bahamas	25.475267	-76.68258
 2197	EUX	F. D. Roosevelt Airport	Caribbean Netherlands	17.4932	-62.981068
 2266	FDF	Martinique Aimé Césaire International Airport	Martinique	14.595747	-61.000122
 2368	FPO	Grand Bahama International Airport	Bahamas	26.548147	-78.696266
 2450	GAO	Mariana Grajales Airport	Cuba	20.085278	-75.15833
 2470	GBJ	Marie-Galante Airport 	Guadeloupe	15.868978	-61.27092
-2488	GCM	Owen Roberts International Airport	British Overseas Territory of Cayman Islands	19.293144	-81.358505
-2506	GDT	JAGS McCartney International Airport 	British Overseas Territoryof Turks and Caicos Islands	21.442223	-71.146034
+2488	GCM	Owen Roberts International Airport	Cayman Islands	19.293144	-81.358505
+2506	GDT	JAGS McCartney International Airport 	Turks and Caicos Islands	21.442223	-71.146034
 2521	GER	Rafael Cabrera Mustelier Airport	Cuba	21.8375	-82.78
 2547	GGT	Exuma International Airport	Bahamas	23.563236	-75.873924
 2550	GHB	Governor's Harbour Airport	Bahamas	25.279385	-76.32441
@@ -1478,19 +1478,19 @@ id	iata	name	country	latitude	longitude
 4159	LGI	Deadman's Cay Airport	Bahamas	23.178904	-75.09393
 4351	LRM	La Romana International Airport 	Dominican Republic	18.448446	-68.911835
 4373	LSS	Les Saintes Airport	Guadeloupe	15.864716	-61.580227
-4461	LYB	Edward Bodden Airfield	British Overseas Territory of Cayman Islands	19.659512	-80.084816
+4461	LYB	Edward Bodden Airfield	Cayman Islands	19.659512	-80.084816
 4521	MBJ	Sangster International Airport	Jamaica	18.502264	-77.91444
-4578	MDS	Middle Caicos Airport	British Overseas Territoryof Turks and Caicos Islands	21.825607	-71.80112
+4578	MDS	Middle Caicos Airport	Turks and Caicos Islands	21.825607	-71.80112
 4669	MHH	Marsh Harbour Airport	Bahamas	26.510798	-77.08529
-4818	MNI	John A. Osborne Airport	British Overseas Territory of Montserrat	16.79143	-62.193333
+4818	MNI	John A. Osborne Airport	Montserrat	16.79143	-62.193333
 4836	MOA	Orestes Acosta Airport	Cuba	20.649256	-74.929596
 5087	MYG	Mayaguana Airport 	Bahamas	22.379759	-73.01259
 5120	MZO	Sierra Maestra Airport	Cuba	20.282398	-77.0966
 5148	NAS	Lynden Pindling International Airport	Bahamas	25.043928	-77.46552
-5167	NCA	North Caicos Airport	British Overseas Territoryof Turks and Caicos Islands	21.917685	-71.93855
+5167	NCA	North Caicos Airport	Turks and Caicos Islands	21.917685	-71.93855
 5208	NEV	Vance W. Amory International Airport	Saint Kitts and Nevis	17.205244	-62.592316
 5773	PAP	Toussaint L'Ouverture International Airport	Haiti	18.575655	-72.29489
-5976	PLS	Providenciales International Airport	British Overseas Territoryof Turks and Caicos Islands	21.776346	-72.27133
+5976	PLS	Providenciales International Airport	Turks and Caicos Islands	21.776346	-72.27133
 6043	POP	Gregorio Luperón International Airport	Dominican Republic	19.75536	-70.56382
 6045	POS	Piarco International Airport	Trinidad and Tobago	10.597696	-61.339527
 6142	PTP	Pointe-à-Pitre International Airport 	Guadeloupe	16.267612	-61.52725
@@ -1505,7 +1505,7 @@ id	iata	name	country	latitude	longitude
 6710	SFG	L'Espérance Airport 	Saint Martin	18.10003	-63.047504
 6827	SKB	Robert L. Bradshaw International Airport	Saint Kitts and Nevis	17.311506	-62.718426
 6871	SLU	George F. L. Charles Airport	Saint Lucia	14.02	-60.993057
-6874	SLX	Salt Cay Airport	British Overseas Territory of Turks and Caicos Islands	21.335411	-71.20286
+6874	SLX	Salt Cay Airport	Turks and Caicos Islands	21.335411	-71.20286
 6888	SML	Stella Maris Airport	Bahamas	23.582664	-75.268326
 6921	SNU	Abel Santamaría Airport	Cuba	22.492155	-79.943985
 7050	STI	Cibao International Airport	Dominican Republic	19.402134	-70.601906
@@ -1517,10 +1517,10 @@ id	iata	name	country	latitude	longitude
 7705	TZN	South Andros Airport 	Bahamas	24.156574	-77.58376
 7833	UPB	Playa Baracoa Airport	Cuba	23.032331	-82.58185
 7896	UVF	Hewanorra International Airport	Saint Lucia	13.733375	-60.95029
-7985	VIJ	Virgin Gorda Airport	British Overseas Territory of Virgin Islands	18.451912	-64.43423
+7985	VIJ	Virgin Gorda Airport	Virgin Islands	18.451912	-64.43423
 8049	VRA	Juan Gualberto Gómez Airport	Cuba	23.034311	-81.43769
 8072	VTU	Hermanos Ameijeiras Airport	Cuba	20.985386	-76.9391
-8395	XSC	South Caicos Airport	British Overseas Territory of Turks and Caicos Islands	21.516314	-71.537834
+8395	XSC	South Caicos Airport	Turks and Caicos Islands	21.516314	-71.537834
 8951	ZSA	San Salvador Airport 	Bahamas	24.06306	-74.522255
 627	BEF	Bluefields Airport	Nicaragua	11.991944	-83.7725
 874	BOC	Bocas del Toro  International Airport	Panama	9.340505	-82.24429
@@ -1740,7 +1740,7 @@ id	iata	name	country	latitude	longitude
 2502	GDN	Gdańsk Lech Wałęsa Airport	Poland	54.37884	18.468075
 2509	GDX	Sokol Airport	Russia	59.914406	150.73111
 2524	GEV	Gällivare Airport	Sweden	67.13484	20.812878
-2559	GIB	Gibraltar International Airport 	British Overseas Territory of Gibraltar	36.153862	-5.3464065
+2559	GIB	Gibraltar International Airport 	Gibraltar	36.153862	-5.3464065
 2627	GMZ	La Gomera Airport	Spain	28.03147	-17.211998
 2629	GNB	Grenoble–Isère Airport	France	45.362175	5.3302445
 2643	GOA	Genoa Cristoforo Colombo Airport	Italy	44.41322	8.8447075
@@ -2611,7 +2611,7 @@ id	iata	name	country	latitude	longitude
 4664	MHC	Mocopulli Airport	Chile	-42.348244	-73.72033
 4694	MII	Frank Miloye Milenkowichi–Marília State Airport	Brazil	-22.19709	-49.92981
 4838	MOC	Montes Claros/Mário Ribeiro Airport	Brazil	-16.704617	-43.820087
-4871	MPN	RAF Mount Pleasant	British Overseas Territory of Falkland Islands	-51.82143	-58.45585
+4871	MPN	RAF Mount Pleasant	Falkland Islands	-51.82143	-58.45585
 4912	MRD	Alberto Carnevalli Airport	Venezuela	8.583008	-71.1616
 4963	MTE	Monte Alegre Airport	Brazil	-1.9937029	-54.068874
 4976	MTR	Los Garzones Airport	Colombia	8.825196	-75.82401
