@@ -96,5 +96,3 @@ function write_tsv_to_file() {
 function write_json_to_file() {
    Deno.writeTextFileSync("airports.json", JSON.stringify(airports))
 }
-
-write_json_to_file()
