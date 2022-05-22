@@ -60,7 +60,6 @@ interface timeBucket {
  * fetchAirport("LAX")
  *    .then(console.log)
  */
-function fetchAirportData(iata:string): Promise<FAAResponse> {
+function fetchAirportData(iata:string) {
    return fetch(`https://www.fly.faa.gov/aadc/api/airports/${iata}`)
-      .then(res => res.json())
 }
