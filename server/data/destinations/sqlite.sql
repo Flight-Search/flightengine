@@ -7,6 +7,8 @@ CREATE TABLE IF NOT EXISTS [Routes] (
    [from_name]  VARCHAR(3)   NULL,        -- origin name
    [to_iata]    VARCHAR(100) NOT NULL,    -- destination iata
    [to_name]    VARCHAR(100) NULL         -- destination name
+
+   FOREIGN KEY (from_iata) REFERENCES Airports(iata)
 );
 
 CREATE INDEX IF NOT EXISTS idx_from_to ON [Routes] (from_iata, to_iata);
