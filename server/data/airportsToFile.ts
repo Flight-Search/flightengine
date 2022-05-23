@@ -74,7 +74,6 @@ const airports: Airport[] = rows
 
 function write_tsv_to_file() {
    const new_headers: Array<keyof Airport> = [
-      "id",
       "iata",
       "name",
       "country",
@@ -96,3 +95,5 @@ function write_tsv_to_file() {
 function write_json_to_file() {
    Deno.writeTextFileSync("airports.json", JSON.stringify(airports))
 }
+
+write_tsv_to_file()
