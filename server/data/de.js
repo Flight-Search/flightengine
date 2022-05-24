@@ -2,8 +2,8 @@ import fs from 'fs';
 import Amadeus from 'amadeus';
 
 const amadeus = new Amadeus({
-  clientId: "lEO8GSCvstwNmO70Xdh6CpGxd2hGufoi",
-  clientSecret: "fxq3CvFVPmtFvJ2p"
+  clientId: "",
+  clientSecret: ""
 });
 
 // let response = await amadeus.airport.directDestinations.get({
@@ -23,7 +23,7 @@ try {
     });
     let data = response.data;
     if (data) {
-      let writeStream = fs.createWriteStream('./de1.csv', {
+      let writeStream = fs.createWriteStream('./de.csv', {
         'flags': 'a',
         'encoding': null,
       });
