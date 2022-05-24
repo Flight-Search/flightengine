@@ -49,4 +49,4 @@ const errorExample = {
       self: "https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=AAM",
       },
    },
-};
+}
