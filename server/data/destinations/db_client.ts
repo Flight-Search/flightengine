@@ -1,7 +1,7 @@
 import { DB } from "https://deno.land/x/sqlite/mod.ts";
 
 const db = new DB("fly.db");
-const lines = Deno.readTextFileSync("./destinations.txt");
+// const lines = Deno.readTextFileSync("./destinations.txt");
 
 // —————————————————————————————————————————————————————————————————————————————
 // Type
@@ -25,33 +25,62 @@ type Destinations = {
 // —————————————————————————————————————————————————————————————————————————————
 // Prepare Query
 
-const addRoute = db.prepareQuery<[string, string]>(`
-   INSERT INTO Routes (from_iata, to_iata)
-      VALUES (:from, :to)
-      ON CONFLICT (from_iata, to_iata) DO NOTHING
-   ;
-`)
+// const addRoute = db.prepareQuery<[string, string]>(`
+//    INSERT INTO Routes (from_iata, to_iata)
+//       VALUES (:from, :to)
+//       ON CONFLICT (from_iata, to_iata) DO NOTHING
+//    ;
+// `)
 
 // —————————————————————————————————————————————————————————————————————————————
 // Execute Query
 
-db.query("BEGIN TRANSACTION;")
+// db.query("BEGIN TRANSACTION;")
 
-const data = lines
+// const data = lines
+//    .split("\n")
+//    .map((json) => JSON.parse(json))
+//    .filter(obj => !obj.warnings)
+//    .filter(obj => !obj.errors)
+//    .forEach((obj:Destinations) => {
+//       const from = obj.meta.links.self.slice(-3)
+//       const targets = obj.data.map(d => d.iataCode)
+//       for (const to of targets) {
+//          try { addRoute.execute({ from, to }) }
+//          catch(e) { console.log(e) }
+//          console.log(`${from} → ${to}`)
+//       }
+//    })
+// ;
+
+// db.query("END TRANSACTION;")
+
+const data = Deno.readTextFileSync("./destinations.txt")
    .split("\n")
-   .map((json) => JSON.parse(json))
+   .map(json => JSON.parse(json))
    .filter(obj => !obj.warnings)
    .filter(obj => !obj.errors)
-   .forEach((obj:Destinations) => {
-      const from = obj.meta.links.self.slice(-3)
+   .map(obj => {
+      const from    = obj.meta.links.self.slice(-3)
       const targets = obj.data.map(d => d.iataCode)
-      for (const to of targets) {
-         try { addRoute.execute({ from, to }) }
-         catch(e) { console.log(e) }
-         console.log(`${from} -> ${to}`)
-      }
+
+      return targets.map(to => ({ from, to }))
    })
+   .flat()
+   .map(route => [route.from, route.to])
 
-db.query("END TRANSACTION;")
+const de = Deno.readTextFileSync("./de.csv")
+   .split("\n")
+   .map((line) => line.split(","))
 
-console.log(data)
+const fg = Deno.readTextFileSync("./fg.csv")
+   .split("\n")
+   .map((line) => line.split(","))
+
+const lines = de
+   .concat(fg)
+   .concat(data)
+   .map(line => line.join(",") + "\n")
+   .join("")
+
+Deno.writeTextFileSync("./routes.csv", lines)
