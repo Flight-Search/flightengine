@@ -1,0 +1,1102 @@
+{
+  "meta": {
+    "count": 182,
+    "links": {
+      "self": "https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=SFO"
+    }
+  },
+  "data": [
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ALBUQUERQUE",
+      "iataCode": "ABQ"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ARCATA/EUREKA",
+      "iataCode": "ACV"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "AUCKLAND",
+      "iataCode": "AKL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "AMSTERDAM",
+      "iataCode": "AMS"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ANCHORAGE",
+      "iataCode": "ANC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "APPLE VALLEY",
+      "iataCode": "APV"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ASPEN",
+      "iataCode": "ASE"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ATLANTA",
+      "iataCode": "ATL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "AUBURN",
+      "iataCode": "AUN"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "AUSTIN",
+      "iataCode": "AUS"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "AVALON",
+      "iataCode": "AVX"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "BATTLE MOUNTAIN",
+      "iataCode": "BAM"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "BARCELONA",
+      "iataCode": "BCN"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "BAKERSFIELD",
+      "iataCode": "BFL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "BISHOP",
+      "iataCode": "BIH"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "BEIJING",
+      "iataCode": "BJS"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "BENGALURU",
+      "iataCode": "BLR"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "EMIGRANT GAP",
+      "iataCode": "BLU"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "NASHVILLE",
+      "iataCode": "BNA"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "BOISE",
+      "iataCode": "BOI"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "BOSTON",
+      "iataCode": "BOS"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "BURBANK",
+      "iataCode": "BUR"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "BOZEMAN",
+      "iataCode": "BZN"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "CRESCENT CITY",
+      "iataCode": "CEC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "CHICAGO",
+      "iataCode": "CHI"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "CHICO",
+      "iataCode": "CIC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "CLEVELAND",
+      "iataCode": "CLE"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "CHARLOTTE",
+      "iataCode": "CLT"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "COLUMBUS",
+      "iataCode": "CMH"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "COPENHAGEN",
+      "iataCode": "CPH"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "CHENGDU",
+      "iataCode": "CTU"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "CANCUN",
+      "iataCode": "CUN"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "CINCINNATI",
+      "iataCode": "CVG"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "DAGGETT",
+      "iataCode": "DAG"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "DELHI",
+      "iataCode": "DEL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "DENVER",
+      "iataCode": "DEN"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "DALLAS",
+      "iataCode": "DFW"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "DOHA",
+      "iataCode": "DOH"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "DETROIT",
+      "iataCode": "DTT"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "DUBLIN",
+      "iataCode": "DUB"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "DUBAI",
+      "iataCode": "DXB"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "EL MONTE",
+      "iataCode": "EMT"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "EUGENE",
+      "iataCode": "EUG"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "FRESNO",
+      "iataCode": "FAT"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "KALISPELL",
+      "iataCode": "FCA"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "FT LAUDERDALE",
+      "iataCode": "FLL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "FRANKFURT",
+      "iataCode": "FRA"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "FULLERTON",
+      "iataCode": "FUL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "FAYETTEVILLE SPRINGD",
+      "iataCode": "FYV"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "GUADALAJARA",
+      "iataCode": "GDL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SPOKANE",
+      "iataCode": "GEG"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "HELSINKI",
+      "iataCode": "HEL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "HARTFORD",
+      "iataCode": "HFD"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "HAWTHORNE",
+      "iataCode": "HHR"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "HONG KONG",
+      "iataCode": "HKG"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "HEMET",
+      "iataCode": "HMT"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "HONOLULU",
+      "iataCode": "HNL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "HOUSTON",
+      "iataCode": "HOU"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "HAWTHORNE",
+      "iataCode": "HTH"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "HAYWARD",
+      "iataCode": "HWD"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "KILLEEN FORT HOOD",
+      "iataCode": "ILE"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "INDIANAPOLIS",
+      "iataCode": "IND"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ISTANBUL",
+      "iataCode": "IST"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "INYOKERN",
+      "iataCode": "IYK"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "JACKSON",
+      "iataCode": "JAC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "KING CITY",
+      "iataCode": "KIC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "KONA",
+      "iataCode": "KOA"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "LAS VEGAS",
+      "iataCode": "LAS"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "LOS ANGELES",
+      "iataCode": "LAX"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "LONG BEACH",
+      "iataCode": "LGB"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "LIHUE",
+      "iataCode": "LIH"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "GUANACASTE",
+      "iataCode": "LIR"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "LISBON",
+      "iataCode": "LIS"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "KLAMATH FALLS",
+      "iataCode": "LMT"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "LONDON",
+      "iataCode": "LON"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "LOS BANOS",
+      "iataCode": "LSN"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "LIVERMORE",
+      "iataCode": "LVK"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MADRID",
+      "iataCode": "MAD"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MADERA",
+      "iataCode": "MAE"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MERCED",
+      "iataCode": "MCE"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MELBOURNE",
+      "iataCode": "MEL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MEXICO CITY",
+      "iataCode": "MEX"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MEDFORD",
+      "iataCode": "MFR"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MOJAVE",
+      "iataCode": "MHV"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MIAMI",
+      "iataCode": "MIA"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "KANSAS CITY",
+      "iataCode": "MKC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MAMMOTH LAKES",
+      "iataCode": "MMH"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MANILA",
+      "iataCode": "MNL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MODESTO",
+      "iataCode": "MOD"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MONTEREY CARMEL",
+      "iataCode": "MRY"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MADISON",
+      "iataCode": "MSN"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MISSOULA",
+      "iataCode": "MSO"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MINNEAPOLIS/ST PAUL",
+      "iataCode": "MSP"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "NEW ORLEANS",
+      "iataCode": "MSY"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MUNICH",
+      "iataCode": "MUC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MARYSVILLE",
+      "iataCode": "MYV"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "NADI",
+      "iataCode": "NAN"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "FALLON",
+      "iataCode": "NFL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "NOVATO",
+      "iataCode": "NOT"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "NEW YORK",
+      "iataCode": "NYC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "OAKLAND",
+      "iataCode": "OAK"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "KAHULUI",
+      "iataCode": "OGG"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "OKLAHOMA CITY",
+      "iataCode": "OKC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "OMAHA",
+      "iataCode": "OMA"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ORLANDO",
+      "iataCode": "ORL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "OSAKA",
+      "iataCode": "OSA"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "NORTH BEND",
+      "iataCode": "OTH"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "OROVILLE",
+      "iataCode": "OVE"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "OXNARD VENTURA",
+      "iataCode": "OXR"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "PALO ALTO",
+      "iataCode": "PAO"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "PARIS",
+      "iataCode": "PAR"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "PORTLAND",
+      "iataCode": "PDX"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "PHILADELPHIA",
+      "iataCode": "PHL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "PHOENIX",
+      "iataCode": "PHX"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "PITTSBURGH",
+      "iataCode": "PIT"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "PALMDALE",
+      "iataCode": "PMD"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "LA VERNE",
+      "iataCode": "POC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "TAHITI",
+      "iataCode": "PPT"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "PASO ROBLES",
+      "iataCode": "PRB"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "PASCO",
+      "iataCode": "PSC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "PALM SPRINGS",
+      "iataCode": "PSP"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "PORTERVILLE",
+      "iataCode": "PTV"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "PANAMA CITY",
+      "iataCode": "PTY"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "PUERTO VALLARTA",
+      "iataCode": "PVR"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "RIVERSIDE",
+      "iataCode": "RAL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ROSEBURG",
+      "iataCode": "RBG"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "RED BLUFF",
+      "iataCode": "RBL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "REDDING",
+      "iataCode": "RDD"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "REDMOND/BEND",
+      "iataCode": "RDM"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "RALEIGH DURHAM",
+      "iataCode": "RDU"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MARIPOSA",
+      "iataCode": "RMY"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "RENO",
+      "iataCode": "RNO"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SACRAMENTO",
+      "iataCode": "SAC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SAN SALVADOR",
+      "iataCode": "SAL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SAN DIEGO",
+      "iataCode": "SAN"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SAN ANTONIO",
+      "iataCode": "SAT"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SANTA BARBARA",
+      "iataCode": "SBA"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SAN BERNARDINO",
+      "iataCode": "SBD"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SAN LUIS OBISPO",
+      "iataCode": "SBP"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SEATTLE",
+      "iataCode": "SEA"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SEOUL",
+      "iataCode": "SEL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SHANGHAI",
+      "iataCode": "SHA"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SINGAPORE",
+      "iataCode": "SIN"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SAN JOSE",
+      "iataCode": "SJC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SAN JOSE DEL CABO",
+      "iataCode": "SJD"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SALT LAKE CITY",
+      "iataCode": "SLC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SANTA MONICA",
+      "iataCode": "SMO"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SANTA MARIA",
+      "iataCode": "SMX"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SANTA ANA",
+      "iataCode": "SNA"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SALINAS",
+      "iataCode": "SNS"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SANTA YNEZ",
+      "iataCode": "SQA"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SAN CARLOS",
+      "iataCode": "SQL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ST LOUIS",
+      "iataCode": "STL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SANTA ROSA",
+      "iataCode": "STS"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "HAILEY/SUNVALLEY",
+      "iataCode": "SUN"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SYDNEY",
+      "iataCode": "SYD"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SANTA PAULA",
+      "iataCode": "SZP"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "TRUCKEE",
+      "iataCode": "TKF"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "TEL AVIV YAFO",
+      "iataCode": "TLV"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "TORRANCE",
+      "iataCode": "TOA"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "TAMPA",
+      "iataCode": "TPA"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "TAIPEI",
+      "iataCode": "TPE"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "TONOPAH",
+      "iataCode": "TPH"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "TEHACHAPI",
+      "iataCode": "TSP"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "TUCSON",
+      "iataCode": "TUS"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "SOUTH LAKE TAHOE",
+      "iataCode": "TVL"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "TOKYO",
+      "iataCode": "TYO"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "UKIAH",
+      "iataCode": "UKI"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "VICTORVILLE",
+      "iataCode": "VCV"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "VISALIA",
+      "iataCode": "VIS"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "CAMP DOUGLAS",
+      "iataCode": "VOK"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "BALTIMORE",
+      "iataCode": "WAS"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "WASHINGTON",
+      "iataCode": "WAS"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "LANCASTER",
+      "iataCode": "WJF"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "WILLOWS",
+      "iataCode": "WLW"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "WINNEMUCCA",
+      "iataCode": "WMC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "WATSONVILLE",
+      "iataCode": "WVI"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "MONTREAL",
+      "iataCode": "YMQ"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "TORONTO",
+      "iataCode": "YTO"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "VANCOUVER",
+      "iataCode": "YVR"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "CALGARY",
+      "iataCode": "YYC"
+    },
+    {
+      "type": "location",
+      "subtype": "city",
+      "name": "ZURICH",
+      "iataCode": "ZRH"
+    }
+  ]
+}
