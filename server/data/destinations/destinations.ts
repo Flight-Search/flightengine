@@ -35,23 +35,17 @@ const OUTPUT_FILE = "destinations.txt"
 // —————————————————————————————————————————————————————————————————————————————
 // Execute
 
-// for (const n of naturals(5)) {
-//    let routes = await fetchDestinations(airports[n].iata, await client.getToken())
-//    Deno.writeTextFileSync(
-//       "destinations.txt",
-//       JSON.stringify(routes) + "\n",
-//       { append: true }
-//    )
-// }
+for (const n of naturals(1252)) {
+   let routes = await fetchDestinations(airports[n].iata, await client.getToken())
+   await wait(100)
+   Deno.writeTextFileSync(
+      OUTPUT_FILE,
+      JSON.stringify(routes) + "\n",
+      { append: true }
+   )
+   console.log(airports[n].iata)
+}
 
-fetchDestinations("DEN", await client.getToken())
-   .then(destinations => {
-      Deno.writeTextFileSync(
-         OUTPUT_FILE,
-         JSON.stringify(destinations) + "\n",
-         { append: true }
-      )
-   })
-
-// —————————————————————————————————————————————————————————————————————————————
-// Example
+function wait(ms=100) {
+   return new Promise(resolve => setTimeout(resolve, ms))
+}
