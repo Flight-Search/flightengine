@@ -2,13 +2,12 @@
 -- Edges
 
 CREATE TABLE IF NOT EXISTS [Routes] (
-   [id]         INTEGER      PRIMARY KEY, -- route id
-   [from_iata]  VARCHAR(3)   NOT NULL,    -- origin iata
-   [from_name]  VARCHAR(3)   NULL,        -- origin name
-   [to_iata]    VARCHAR(100) NOT NULL,    -- destination iata
-   [to_name]    VARCHAR(100) NULL,        -- destination name
+   [id]         INTEGER    PRIMARY KEY, -- route id
+   [from_iata]  VARCHAR(3) NOT NULL,    -- origin iata
+   [to_iata]    VARCHAR(3) NOT NULL,    -- destination iata
 
    FOREIGN KEY (from_iata) REFERENCES Airports(iata)
+   FOREIGN KEY (to_iata)   REFERENCES Airports(iata)
 );
 
 CREATE UNIQUE INDEX IF NOT EXISTS idx_from_to ON [Routes] (from_iata, to_iata);
