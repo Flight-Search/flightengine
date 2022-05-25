@@ -1,20 +1,12 @@
 -- —————————————————————————————————————————————————————————————————————————————
--- Edges
+-- Reset Database
 
-CREATE TABLE IF NOT EXISTS [Routes] (
-   [id]         INTEGER    PRIMARY KEY, -- route id
-   [from_iata]  VARCHAR(3) NOT NULL,    -- origin iata
-   [to_iata]    VARCHAR(3) NOT NULL,    -- destination iata
-
-   FOREIGN KEY (from_iata) REFERENCES Airports(iata)
-   FOREIGN KEY (to_iata)   REFERENCES Airports(iata)
-);
-
-CREATE UNIQUE INDEX IF NOT EXISTS idx_from_to ON [Routes] (from_iata, to_iata);
-CREATE        INDEX IF NOT EXISTS idx_to      ON [Routes] (to_iata);
+DROP TABLE IF EXISTS Airports;
+DROP TABLE IF EXISTS Routes;
+DROP TABLE IF EXISTS Airlines;
 
 -- —————————————————————————————————————————————————————————————————————————————
--- Vertices
+-- Airports
 
 CREATE TABLE IF NOT EXISTS [Airports] (
    [iata]       CHAR(3)      PRIMARY KEY,  -- iata
@@ -25,6 +17,20 @@ CREATE TABLE IF NOT EXISTS [Airports] (
 );
 
 CREATE INDEX IF NOT EXISTS idx_coordinates ON [Airports] (latitude, longitude);
+
+-- —————————————————————————————————————————————————————————————————————————————
+-- Routes
+
+CREATE TABLE IF NOT EXISTS [Routes] (
+   [from_iata]  VARCHAR(3) NOT NULL,    -- origin iata
+   [to_iata]    VARCHAR(3) NOT NULL,    -- destination iata
+
+   PRIMARY KEY (from_iata, to_iata),
+   FOREIGN KEY (from_iata) REFERENCES Airports(iata),
+   FOREIGN KEY (to_iata)   REFERENCES Airports(iata)
+);
+
+CREATE INDEX IF NOT EXISTS idx_to ON Routes (to_iata);
 
 -- —————————————————————————————————————————————————————————————————————————————
 -- Airlines
