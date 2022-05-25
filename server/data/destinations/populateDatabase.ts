@@ -5,10 +5,10 @@ import { DB } from "https://deno.land/x/sqlite/mod.ts"
 
 type Destinations = {
    data: {
-         type     : string // location
-         subtype  : string // city
-         name     : string // Bangalore
-         iataCode : string // BLR
+      type     : string // location
+      subtype  : string // city
+      name     : string // Bangalore
+      iataCode : string // BLR
    }[],
    meta: {
       count : number // integer
@@ -49,25 +49,32 @@ const add_route = db.prepareQuery<[string, string]>(`
    ;
 `)
 
+function populate_airports() {
+   db.query("BEGIN TRANSACTION;")
+   for (const airport of airports) {
+      try { add_airport.execute(airport) }
+      catch(e) { 
+         console.log(airport[0])
+         console.log(e) 
+      }
+   }
+   db.query("END TRANSACTION;")
+}
+
+function populate_routes() {
+   db.query("BEGIN TRANSACTION;")
+   for (const route of routes) {
+      try { add_route.execute(route) }
+      catch(e) { 
+         console.log(`${route[0]} → ${route[1]}`)   
+         console.log(e) 
+      }
+   }
+   db.query("END TRANSACTION;")
+}
+
 // —————————————————————————————————————————————————————————————————————————————
 // Execute Query
 
-db.query("BEGIN TRANSACTION;")
-for (const airport of airports) {
-   try { add_airport.execute(airport) }
-   catch(e) { 
-      console.log(airport[0])
-      console.log(e) 
-   }
-}
-db.query("END TRANSACTION;")
-
-db.query("BEGIN TRANSACTION;")
-for (const route of routes) {
-   try { add_route.execute(route) }
-   catch(e) { 
-      console.log(`${route[0]} → ${route[1]}`)   
-      console.log(e) 
-   }
-}
-db.query("END TRANSACTION;")
+populate_airports()
+populate_routes()
