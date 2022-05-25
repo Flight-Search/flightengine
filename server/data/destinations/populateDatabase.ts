@@ -1,6 +1,4 @@
-import { DB } from "https://deno.land/x/sqlite/mod.ts";
-
-const db = new DB("fly.db");
+import { DB } from "https://deno.land/x/sqlite/mod.ts"
 
 // —————————————————————————————————————————————————————————————————————————————
 // Type
@@ -22,47 +20,31 @@ type Destinations = {
 }
 
 // —————————————————————————————————————————————————————————————————————————————
-// Data
+// Environment
 
-const data = Deno.readTextFileSync("./destinations.txt")
+const db = new DB("fly.db")
+
+const routes = Deno.readTextFileSync("../routes.csv")
    .split("\n")
-   .map(json => JSON.parse(json))
-   .filter(obj => !obj.warnings)
-   .filter(obj => !obj.errors)
-   .map(obj => {
-      const from    = obj.meta.links.self.slice(-3)
-      const targets = obj.data.map(d => d.iataCode)
+   .map(line => line.split(","))
 
-      return targets.map(to => ({ from, to }))
-   })
-   .flat()
-   .map(route => [route.from, route.to])
-
-const de = Deno.readTextFileSync("./de.csv")
+const airports = Deno.readTextFileSync("../airports.tsv")
    .split("\n")
-   .map((line) => line.split(","))
-
-const fg = Deno.readTextFileSync("./fg.csv")
-   .split("\n")
-   .map((line) => line.split(","))
-
-const csv = Deno.readTextFileSync("../routes.csv")
-   .split("\n")
-   .map((line) => line.split(","))
+   .map(line => line.split("\t"))
 
 // —————————————————————————————————————————————————————————————————————————————
 // Prepare Query
 
-const addAirport = db.prepareQuery<[string, string]>(`
-   INSERT INTO Routes (from_iata, to_iata)
-      VALUES (:from, :to)
-      ON CONFLICT (from_iata, to_iata) DO NOTHING
+const add_airport = db.prepareQuery(`
+   INSERT INTO Airports (iata, name, country, latitude, longitude)
+      VALUES (?, ?, ?, ?, ?)
+      ON CONFLICT (iata) DO NOTHING
    ;
 `)
 
-const addRoute = db.prepareQuery<[string, string]>(`
+const add_route = db.prepareQuery<[string, string]>(`
    INSERT INTO Routes (from_iata, to_iata)
-      VALUES (:from, :to)
+      VALUES (?, ?)
       ON CONFLICT (from_iata, to_iata) DO NOTHING
    ;
 `)
@@ -71,30 +53,21 @@ const addRoute = db.prepareQuery<[string, string]>(`
 // Execute Query
 
 db.query("BEGIN TRANSACTION;")
-for (const [from, to] of csv) {
-   try { addRoute.execute({ from, to }) }
-   catch(e) { console.log(e) }
-   console.log(`${from} → ${to}`)   
+for (const airport of airports) {
+   try { add_airport.execute(airport) }
+   catch(e) { 
+      console.log(airport[0])
+      console.log(e) 
+   }
 }
 db.query("END TRANSACTION;")
 
-// —————————————————————————————————————————————————————————————————————————————
-// Old Reference Code
-
-// db.query("BEGIN TRANSACTION;")
-// const data = lines
-//    .split("\n")
-//    .map((json) => JSON.parse(json))
-//    .filter(obj => !obj.warnings)
-//    .filter(obj => !obj.errors)
-//    .forEach((obj:Destinations) => {
-//       const from = obj.meta.links.self.slice(-3)
-//       const targets = obj.data.map(d => d.iataCode)
-//       for (const to of targets) {
-//          try { addRoute.execute({ from, to }) }
-//          catch(e) { console.log(e) }
-//          console.log(`${from} → ${to}`)
-//       }
-//    })
-// ;
-// db.query("END TRANSACTION;")
+db.query("BEGIN TRANSACTION;")
+for (const route of routes) {
+   try { add_route.execute(route) }
+   catch(e) { 
+      console.log(`${route[0]} → ${route[1]}`)   
+      console.log(e) 
+   }
+}
+db.query("END TRANSACTION;")

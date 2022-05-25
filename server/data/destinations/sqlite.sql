@@ -1,9 +1,11 @@
 -- —————————————————————————————————————————————————————————————————————————————
 -- Reset Database
 
-DROP TABLE IF EXISTS Airports;
 DROP TABLE IF EXISTS Routes;
+DROP TABLE IF EXISTS Airports;
 DROP TABLE IF EXISTS Airlines;
+DROP INDEX IF EXISTS idx_coordinates;
+DROP INDEX IF EXISTS idx_to;
 
 -- —————————————————————————————————————————————————————————————————————————————
 -- Airports
@@ -26,8 +28,7 @@ CREATE TABLE IF NOT EXISTS [Routes] (
    [to_iata]    VARCHAR(3) NOT NULL,    -- destination iata
 
    PRIMARY KEY (from_iata, to_iata),
-   FOREIGN KEY (from_iata) REFERENCES Airports(iata),
-   FOREIGN KEY (to_iata)   REFERENCES Airports(iata)
+   FOREIGN KEY (from_iata) REFERENCES Airports(iata)
 );
 
 CREATE INDEX IF NOT EXISTS idx_to ON Routes (to_iata);
