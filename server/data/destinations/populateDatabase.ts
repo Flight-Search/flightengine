@@ -1,25 +1,6 @@
 import { DB } from "https://deno.land/x/sqlite/mod.ts"
 
 // —————————————————————————————————————————————————————————————————————————————
-// Type
-
-type Destinations = {
-   data: {
-      type     : string // location
-      subtype  : string // city
-      name     : string // Bangalore
-      iataCode : string // BLR
-   }[],
-   meta: {
-      count : number // integer
-      sort  : string // iataCode
-      links : {
-         self : string // https://test.api.amadeus.com/v1/airport/direct-destination?departureAirportCode=NCE&max=2
-      }
-   },
-}
-
-// —————————————————————————————————————————————————————————————————————————————
 // Environment
 
 const db = new DB("fly.db")
@@ -53,9 +34,9 @@ function populate_airports() {
    db.query("BEGIN TRANSACTION;")
    for (const airport of airports) {
       try { add_airport.execute(airport) }
-      catch(e) { 
+      catch(e) {
          console.log(airport[0])
-         console.log(e) 
+         console.log(e)
       }
    }
    db.query("END TRANSACTION;")
@@ -65,9 +46,9 @@ function populate_routes() {
    db.query("BEGIN TRANSACTION;")
    for (const route of routes) {
       try { add_route.execute(route) }
-      catch(e) { 
-         console.log(`${route[0]} → ${route[1]}`)   
-         console.log(e) 
+      catch(e) {
+         console.log(`${route[0]} → ${route[1]}`)
+         console.log(e)
       }
    }
    db.query("END TRANSACTION;")
