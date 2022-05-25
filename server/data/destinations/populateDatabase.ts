@@ -35,7 +35,7 @@ const airports = Deno.readTextFileSync("../airports.tsv")
 // —————————————————————————————————————————————————————————————————————————————
 // Prepare Query
 
-const add_airport = db.prepareQuery(`
+const add_airport = db.prepareQuery<[string, string, string, string, string]>(`
    INSERT INTO Airports (iata, name, country, latitude, longitude)
       VALUES (?, ?, ?, ?, ?)
       ON CONFLICT (iata) DO NOTHING
