@@ -1,10 +1,10 @@
-import Client, { fetchDestinations } from "../../api/amadeus.ts"
-import { AMADEUS_KEY, AMADEUS_SECRET } from "../../../.env.ts"
+import Client, { fetchDestinations } from "../../../api/amadeus.ts"
+import { AMADEUS_KEY, AMADEUS_SECRET } from "../../../../.env.ts"
 import {
    Destinations,
    DestinationsError,
    DestinationsResponse,
-} from "../../../types/api.ts"
+} from "../../../../types/api.ts"
 
 import airports from "../airports.json" assert { type: "json" }
 
