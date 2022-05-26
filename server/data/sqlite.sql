@@ -40,7 +40,7 @@ CREATE INDEX IF NOT EXISTS idx_to_iata ON Routes (to_iata);
 
 CREATE TABLE IF NOT EXISTS [Airlines] (
    [code]  CHAR(2)      NOT NULL,  -- airline code
-   [name]  VARCHAR(100) NULL       -- name of airline company
+   [name]  VARCHAR(100) NULL,      -- name of airline company
 
    PRIMARY KEY (code)
 );

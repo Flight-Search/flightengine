@@ -5,11 +5,11 @@ import { DB } from "https://deno.land/x/sqlite/mod.ts"
 
 const db = new DB("fly.db")
 
-const routes = Deno.readTextFileSync("../routes.csv")
+const routes = Deno.readTextFileSync("./routes.csv")
    .split("\n")
    .map(line => line.split(","))
 
-const airports = Deno.readTextFileSync("../airports.tsv")
+const airports = Deno.readTextFileSync("./airports.tsv")
    .split("\n")
    .map(line => line.split("\t"))
 

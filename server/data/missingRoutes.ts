@@ -16,5 +16,5 @@ const query =`
 // Query for Unidentified Airport Destinations
 
 const unidentified_iata = db.query(query).flat()
-
+console.log(unidentified_iata)
 export default unidentified_iata
