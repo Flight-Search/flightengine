@@ -14,7 +14,8 @@ CREATE TABLE Airports (
    name       VARCHAR(100) NOT NULL,
    country    VARCHAR(100) NOT NULL,
    latitude   REAL         NOT NULL,
-   longitude  REAL         NOT NULL
+   longitude  REAL         NOT NULL,
+   weight     INT          NOT NULL DEFAULT 0,
 )
 
 CREATE INDEX idx_coordinates ON Airports (latitude, longitude);
