@@ -15,7 +15,6 @@ CREATE TABLE Airports (
    country    VARCHAR(100) NOT NULL,
    latitude   REAL         NOT NULL,
    longitude  REAL         NOT NULL,
-   weight     INT          NOT NULL DEFAULT 0,
 )
 
 CREATE INDEX idx_coordinates ON Airports (latitude, longitude);
@@ -40,3 +39,11 @@ CREATE TABLE Airlines (
    code  CHAR(2)      PRIMARY KEY,
    name  VARCHAR(100) NULL
 )
+
+-- —————————————————————————————————————————————————————————————————————————————
+-- Materialized Views
+
+CREATE MATERIALIZED VIEW Airports_Weighted AS
+   SELECT from_iata, count(to_iata) AS weight
+   FROM Routes GROUP BY from_iata
+;
