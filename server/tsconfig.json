@@ -8,4 +8,5 @@
       "outDir": "dist",
       "sourceMap": true
    },
+   "exclude": ["data", "api", "dist"],
 }

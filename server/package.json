@@ -4,7 +4,7 @@
    "private": true,
    "type": "module",
    "scripts": {
-      "serve": "nodemon ./server/index.js",
+      "serve": "tsc && nodemon ./dist/index.js",
       "db-reset": "psql --dbname postgres -f ./server/database/schema.sql"
    },
    "dependencies": {
